@@ -1,6 +1,13 @@
+/*AUTHORS :
+TSHAMBA KUSUNGA KEVIN
+MUKEBA MUKEBA CHRINOVIC */
+
 let btnplay = document.getElementsByClassName('play');
 
-
+let btn1 = document.querySelector('.bouton1')
+        let btn2 = document.querySelector('.bouton2')
+        let btn3 = document.querySelector('.bouton3')
+        let btn4 = document.querySelector('.bouton4')
 
 
 
@@ -13,11 +20,6 @@ function changementCouleur(){
         let couleur3 = 'rgb(' + couleurAlea(255) + ', ' + couleurAlea(255) + ', ' + couleurAlea(255)
         let couleur4 = 'rgb(' + couleurAlea(255) + ', ' + couleurAlea(255) + ', ' + couleurAlea(255)
 
-        let btn1 = document.querySelector('.bouton1')
-        let btn2 = document.querySelector('.bouton2')
-        let btn3 = document.querySelector('.bouton3')
-        let btn4 = document.querySelector('.bouton4')
-
         btn1.style.backgroundColor = couleur1;
         btn2.style.backgroundColor = couleur2;
         btn3.style.backgroundColor = couleur3;
@@ -25,6 +27,9 @@ function changementCouleur(){
 }
 
 function main(){
-    setInterval(
-    changementCouleur, 1000)
+    let temp = setInterval(
+    changementCouleur, 90)
+    setTimeout(() => {
+        clearInterval(temp)
+    }, 500);
 }
