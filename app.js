@@ -37,6 +37,11 @@ nuit_jour.onclick = function (){
             // Dans le cas contraire on met le font en noire et le texte en blanc
             corps.style.backgroundColor = "black";
             corps.style.color = "white";
+            btn1.style.border = "1px solid #fff"
+            btn2.style.border = "1px solid #fff"
+            btn3.style.border = "1px solid #fff"
+            btn4.style.border = "1px solid #fff"
+            boite_de_dialogue.style.border = "1px solid #fff"
             // On met le texte mode jour
             nuit_jour.textContent ="MODE JOUR";
         }
