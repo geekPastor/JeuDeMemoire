@@ -2,11 +2,12 @@ let btnplay = document.getElementsByClassName('play');
 
 let gagnant = 0;
 let nb
-let btn1 = document.getElementById('btn1')
-let btn2 = document.getElementById('btn2')
-let btn3 = document.getElementById('btn3')
-let btn4 = document.getElementById('btn4')
-let ctn = document.getElementById('ctn')
+let btn1 = document.getElementById('btn1');
+let btn2 = document.getElementById('btn2');
+let btn3 = document.getElementById('btn3');
+let btn4 = document.getElementById('btn4');
+let c1 = document.getElementById('c1');
+let c2 = document.getElementById('c2');
 
 function changementCouleur(){
 
@@ -28,8 +29,9 @@ function changementCouleur(){
         btn3.innerText = "Trouve moi"
         btn4.innerText = "Trouve moi"
 
-        nb = Math.floor(Math.random() * 4);
-        ctn.children.item(nb).innerText = "Gagnant"
+        nb = Math.floor(Math.random() * 2);
+        c1.children.item(nb).innerText = "Gagnant"
+        c2.children.item(nb).innerText = "Gagnant"
 }
 
 function main(){
