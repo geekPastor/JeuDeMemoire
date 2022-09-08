@@ -62,7 +62,6 @@ main .container .c1 .trv, main .container .c2 .trv{
     padding: 1rem;
     border: none;
     border-radius: 10px;
-    transition: all .5s ease-in-out;
 }
 
 main .container .c1 .trv:hover, main .container .c2 .trv:hover{

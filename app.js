@@ -1,9 +1,9 @@
 let btnplay = document.getElementsByClassName('play');
 
-        let btn1 = document.querySelector('#bouton1')
-        let btn2 = document.querySelector('#bouton2')
-        let btn3 = document.querySelector('#bouton3')
-        let btn4 = document.querySelector('#bouton4')
+        let btn1 = document.getElementById('btn1')
+        let btn2 = document.getElementById('btn2')
+        let btn3 = document.getElementById('btn3')
+        let btn4 = document.getElementById('btn4')
 
 
 
@@ -24,7 +24,9 @@ function changementCouleur(){
 
 function main(){
     let temp = setInterval(
-    changementCouleur, 90)
+    changementCouleur, 0.05 * 1000)
+
+    
     setTimeout(() => {
         clearInterval(temp)
     }, 500);
