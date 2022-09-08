@@ -20,20 +20,19 @@ nuit_jour.onclick = function (){
 
         //on verifie s'il y etait ecrit MODE JOUR
         if (nuit_jour.textContent =="MODE JOUR"){
-            // On remet le fond de la page en blancs et les ecrits principaux en noir
+
+            // On met le font de la page en blanc et le texte en noire (par defaut)
             corps.style.backgroundColor = "white";
             corps.style.color = "black";
-            // On ecrit MODE NUIT sur le bouton
+            // On met le texte mode nuit
              nuit_jour.textContent ="MODE NUIT";
         }
-        else
-        {
-            // Dans le cas contraire on noirci le fond de la page
-      corps.style.backgroundColor = "black";
-      // On eclairci les ecrits principaux
-      corps.style.color = "white";
-      // On ecrit MODE JOUR sur le bouton nuit_jour
-        nuit_jour.textContent ="MODE JOUR";
+        else{
+            // Dans le cas contraire on met le font en noire et le texte en blanc
+            corps.style.backgroundColor = "black";
+            corps.style.color = "white";
+            // On met le texte mode jour
+            nuit_jour.textContent ="MODE JOUR";
         }
     };
 
