@@ -9,6 +9,12 @@ let btn4 = document.getElementById('btn4');
 let c1 = document.getElementById('c1');
 let c2 = document.getElementById('c2');
 
+let mode = document.querySelector('.mode');
+
+let corpsPage = document.querySelector("body");
+
+mode.textContent = "mode nuit";
+
 function changementCouleur(){
 
         function couleurAlea(nombre){

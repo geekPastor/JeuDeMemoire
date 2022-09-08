@@ -20,13 +20,17 @@ nav{
     margin-right: 50px;
 }
 
-.play, .help{
+.play, .help, .mode{
     width: 100px;
     height: 50px;
 }
 
-.play:hover, .help:hover{
+.play:hover, .help:hover, .mode:hover{
     cursor: pointer;
+}
+
+.mode{
+    border-radius: 50px;
 }
 
 main{
