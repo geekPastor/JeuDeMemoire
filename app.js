@@ -8,14 +8,11 @@ let btn3 = document.getElementById('btn3')
 let btn4 = document.getElementById('btn4')
 let ctn = document.getElementById('ctn')
 
-
-function couleurAlea(nombre){
-    return Math.floor(Math.random() *  nombre);
-}
-
 function changementCouleur(){
 
-        
+        function couleurAlea(nombre){
+            return Math.floor(Math.random() *  nombre);
+        }
         let couleur1 = 'rgb(' + couleurAlea(255) + ', ' + couleurAlea(255) + ', ' + couleurAlea(255)
         let couleur2 = 'rgb(' + couleurAlea(255) + ', ' + couleurAlea(255) + ', ' + couleurAlea(255)
         let couleur3 = 'rgb(' + couleurAlea(255) + ', ' + couleurAlea(255) + ', ' + couleurAlea(255)
@@ -35,46 +32,49 @@ function changementCouleur(){
         ctn.children.item(nb).innerText = "Gagnant"
 }
 
-function finDujeu(){
-    setTimeout(() => {
-    clearInterval(temp);
+function main(){
+    let temp = setInterval(
+    changementCouleur, 0.05 * 1000)
 
-    if(btn1.textContent === "Gagnant"){
-        gagnant = 1;
+    
+   let finDujeu =  setTimeout(() => {
+        clearInterval(temp);
+        // On verifie dans quel bloc se trouve le mot GAGNANT et on donne le numero de ce bloc à la variable gagnant
+    if (b1.textContent =="GAGNANT"){
+        gagnant =1;
     }
 
-    if(btn2.textContent === "Gagnant"){
-        gagnant = 2;
+    if (b2.textContent =="GAGNANT"){
+        gagnant=2;
     }
 
-    if(btn3.textContent === "Gagnant"){
-        gagnant = 3;
-    }
-
-    if(btn4.textContent === "Gagnant"){
-        gagnant = 4;
+    if (b3.textContent =="GAGNANT"){
+        gagnant =3;
     }
 
 
-    //on donne aux textes la couleur blanche
+    if (b4.textContent =="GAGNANT"){
+        gagnant =4;
+    }
 
-    b1.style.color = "#f1f1f1";
-    b2.style.color = "#f1f1f1";
-    b3.style.color = "#f1f1f1";
-    b4.style.color = "#f1f1f1";
-
-    //apres l'interval on met l'arriere plan noir aux blocks
-
+    //On met un fond noir aux blocs
     b1.style.backgroundColor = "#010101";
     b2.style.backgroundColor = "#010101";
     b3.style.backgroundColor = "#010101";
     b4.style.backgroundColor = "#010101";
 
-}, 500);
-}
+    // On donne une couleur blanche aux textes des blocs
+    b1.style.color = "#f1f1f1";
+    b2.style.color = "#f1f1f1";
+    b3.style.color = "#f1f1f1";
+    b4.style.color = "#f1f1f1";
 
+    //On met des chiffres comme texte dans les blocks
+    b1.textContent = "1";
+    b2.textContent = "2";
+    b3.textContent = "3";
+    b4.textContent = "4";
 
-function main(){
-    let temp = setInterval(
-    changementCouleur, 0.05 * 1000)
+    
+    }, 500);
 }
