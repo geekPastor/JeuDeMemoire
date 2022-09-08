@@ -78,6 +78,25 @@ main .container .c1 .trv:hover, main .container .c2 .trv:hover{
     border: 1px solid #000;
 }
 
+.boite{
+    display: none;
+}
+
+.boite.active{
+    width: 20%;
+    height: 30%;
+    border: 1px solid #000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+strong{
+    font-size: 50px;
+}
+
 @media screen and (max-width: 450px){
     .instruction{
         display: none;
