@@ -12,6 +12,12 @@ let c2 = document.getElementById('c2');
 let nuit_jour = document.getElementById("nuit_jour");
 let corps = document.querySelector("body");
 
+let boite_de_dialogue = document.querySelector('.boite');
+
+let signe = document.querySelector('.signe');
+
+let indication = document.querySelector('.indication')
+
 //je predefini le texte par defaut
 nuit_jour.textContent ="MODE NUIT";
 
