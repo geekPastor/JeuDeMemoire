@@ -8,7 +8,7 @@ let btn3 = document.getElementById('btn3');
 let btn4 = document.getElementById('btn4');
 let c1 = document.getElementById('c1');
 let c2 = document.getElementById('c2');
-
+let corpsJeu = document.querySelector('ctn')
 let nuit_jour = document.getElementById("nuit_jour");
 let corps = document.querySelector("body");
 
@@ -118,12 +118,19 @@ function main(){
         if (gagnant ==1)
             {
                 // Si oui on affiche "Gagné" pour preciser que l'utilisateur a gagné le jeu
-                alert("Gagné!");
+                boite_de_dialogue.classList.add('active');
+                corpsJeu.style.display = "none";
+                signe.textContent = "&#9989;"
+                indication.textContent = "Vous avez gagn&egrave;(e)"
+
             }
         else
         {
             // Si non c'est perdu
-            alert("Perdu!");
+                boite_de_dialogue.classList.add('active');
+                corpsJeu.style.display = "none";
+                signe.textContent = "&#10060;"
+                indication.textContent = "Vous avez perdu(e)"
         }
     };
     
