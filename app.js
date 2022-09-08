@@ -37,46 +37,46 @@ function main(){
     changementCouleur, 0.05 * 1000)
 
     
-   let finDujeu =  setTimeout(() => {
+   setTimeout(() => {
         clearInterval(temp);
         // On verifie dans quel bloc se trouve le mot GAGNANT et on donne le numero de ce bloc à la variable gagnant
-    if (b1.textContent =="GAGNANT"){
+    if (btn1.textContent.toLocaleLowerCase() == "gagnant"){
         gagnant =1;
     }
 
-    if (b2.textContent =="GAGNANT"){
+    if (btn2.textContent.toLocaleLowerCase() == "gagnant"){
         gagnant=2;
     }
 
-    if (b3.textContent =="GAGNANT"){
+    if (btn3.textContent.toLocaleLowerCase() == "gagnant"){
         gagnant =3;
     }
 
 
-    if (b4.textContent =="GAGNANT"){
+    if (btn4.textContent.toLocaleLowerCase() =="gagnant"){
         gagnant =4;
     }
 
     //On met un fond noir aux blocs
-    b1.style.backgroundColor = "#010101";
-    b2.style.backgroundColor = "#010101";
-    b3.style.backgroundColor = "#010101";
-    b4.style.backgroundColor = "#010101";
+    btn1.style.backgroundColor = "#010101";
+    btn2.style.backgroundColor = "#010101";
+    btn3.style.backgroundColor = "#010101";
+    btn4.style.backgroundColor = "#010101";
 
     // On donne une couleur blanche aux textes des blocs
-    b1.style.color = "#f1f1f1";
-    b2.style.color = "#f1f1f1";
-    b3.style.color = "#f1f1f1";
-    b4.style.color = "#f1f1f1";
+    btn1.style.color = "#f1f1f1";
+    btn2.style.color = "#f1f1f1";
+    btn3.style.color = "#f1f1f1";
+    btn4.style.color = "#f1f1f1";
 
     //On met des chiffres comme texte dans les blocks
-    b1.textContent = "1";
-    b2.textContent = "2";
-    b3.textContent = "3";
-    b4.textContent = "4";
+    btn1.innerText = "1";
+    btn2.innerText = "2";
+    btn3.innerText = "3";
+    btn4.innerText = "4";
 
     // Au clique sur un bloc, on verifie si la variable "gagnant" porte le numero de ce bloc
-    b1.onclick = function ()
+    btn1.onclick = function ()
     {
         if (gagnant ==1)
             {
@@ -91,7 +91,7 @@ function main(){
     };
     
     // On fait la meme chose avec tous les 4 blocs
-    b2.onclick = function ()
+    btn2.onclick = function ()
     {
         if (gagnant ==2)
             {
@@ -103,7 +103,7 @@ function main(){
         }
     };
     
-    b3.onclick = function ()
+    btn3.onclick = function ()
     {
         if (gagnant==3)
             {
@@ -115,7 +115,7 @@ function main(){
         }
     };
     
-    b4.onclick = function ()
+    btn4.onclick = function ()
     {
         if (gagnant ==4)
             {
