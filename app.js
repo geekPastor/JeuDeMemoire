@@ -34,7 +34,7 @@ function changementCouleur(){
 
 function main(){
     let temp = setInterval(
-    changementCouleur, 0.05 * 1000)
+    changementCouleur, 0.15 * 1000)
 
     
    setTimeout(() => {
@@ -126,5 +126,5 @@ function main(){
             alert("Perdu!");
         }
     };
-    }, 500);
+    }, 1000);
 }
