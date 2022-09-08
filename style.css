@@ -57,7 +57,7 @@ main .container .c1, main .container .c2{
     gap: 15px;
 }
 
-main .container .c1 .trv, main .container .c2 .trv{
+main .container .trv{
     width: 30%;
     padding: 1rem;
     border: none;

@@ -1,13 +1,14 @@
 let btnplay = document.getElementsByClassName('play');
 
-        let btn1 = document.getElementById('btn1')
-        let btn2 = document.getElementById('btn2')
-        let btn3 = document.getElementById('btn3')
-        let btn4 = document.getElementById('btn4')
-
-
+let nb
+let btn1 = document.getElementById('btn1')
+let btn2 = document.getElementById('btn2')
+let btn3 = document.getElementById('btn3')
+let btn4 = document.getElementById('btn4')
+let ctn = document.getElementById('ctn')
 
 function changementCouleur(){
+
         function couleurAlea(nombre){
             return Math.floor(Math.random() *  nombre);
         }
@@ -20,6 +21,14 @@ function changementCouleur(){
         btn2.style.backgroundColor = couleur2;
         btn3.style.backgroundColor = couleur3;
         btn4.style.backgroundColor = couleur4;
+
+        btn1.innerText = "Trouve moi"
+        btn2.innerText = "Trouve moi"
+        btn3.innerText = "Trouve moi"
+        btn4.innerText = "Trouve moi"
+
+        nb = Math.floor(Math.random() * ctn.childElementCount);
+        ctn.children.item(nb).innerText = "Gagnant"
 }
 
 function main(){
