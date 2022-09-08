@@ -19,3 +19,53 @@ header{
 nav{
     margin-right: 50px;
 }
+
+.play, .help{
+    width: 100px;
+    height: 50px;
+}
+
+.play:hover, .help:hover{
+    cursor: pointer;
+}
+
+main{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+main .container{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .container .c1, main .container .c2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+main .container .c1 .trv, main .container .c2 .trv{
+    width: 30%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+
+main .container .c1 .trv:hover, main .container .c2 .trv:hover{
+    cursor: pointer;
+    border: 1px solid #000;
+}

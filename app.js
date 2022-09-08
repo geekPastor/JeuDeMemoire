@@ -1,9 +1,9 @@
 let btnplay = document.getElementsByClassName('play');
 
-let btn1 = document.querySelector('.bouton1')
-        let btn2 = document.querySelector('.bouton2')
-        let btn3 = document.querySelector('.bouton3')
-        let btn4 = document.querySelector('.bouton4')
+        let btn1 = document.querySelector('#bouton1')
+        let btn2 = document.querySelector('#bouton2')
+        let btn3 = document.querySelector('#bouton3')
+        let btn4 = document.querySelector('#bouton4')
 
 
 
