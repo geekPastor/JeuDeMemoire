@@ -9,11 +9,35 @@ let btn4 = document.getElementById('btn4');
 let c1 = document.getElementById('c1');
 let c2 = document.getElementById('c2');
 
-let mode = document.querySelector('.mode');
+let nuit_jour = document.getElementById("nuit_jour");
+let corps = document.querySelector("body");
 
-let corpsPage = document.querySelector("body");
+//je predefini le texte par defaut
+nuit_jour.textContent ="MODE NUIT";
 
-mode.textContent = "mode nuit";
+// Une fois qu'on clique dessus
+nuit_jour.onclick = function (){
+
+        //on verifie s'il y etait ecrit MODE JOUR
+        if (nuit_jour.textContent =="MODE JOUR"){
+            // On remet le fond de la page en blancs et les ecrits principaux en noir
+            corps.style.backgroundColor = "white";
+            corps.style.color = "black";
+            // On ecrit MODE NUIT sur le bouton
+             nuit_jour.textContent ="MODE NUIT";
+        }
+        else
+        {
+            // Dans le cas contraire on noirci le fond de la page
+      corps.style.backgroundColor = "black";
+      // On eclairci les ecrits principaux
+      corps.style.color = "white";
+      // On ecrit MODE JOUR sur le bouton nuit_jour
+        nuit_jour.textContent ="MODE JOUR";
+        }
+    };
+
+
 
 function changementCouleur(){
 
