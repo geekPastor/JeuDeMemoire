@@ -1,6 +1,6 @@
 let btnplay = document.getElementsByClassName('play');
 
-let gagnant = 0;
+let gagnant
 let nb
 let btn1 = document.getElementById('btn1');
 let btn2 = document.getElementById('btn2');
@@ -36,7 +36,7 @@ function changementCouleur(){
 
 function main(){
     let temp = setInterval(
-    changementCouleur, 0.15 * 1000)
+    changementCouleur, 0.25 * 1000)
 
     
    setTimeout(() => {
