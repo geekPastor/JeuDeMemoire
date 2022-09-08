@@ -75,6 +75,56 @@ function main(){
     b3.textContent = "3";
     b4.textContent = "4";
 
+    // Au clique sur un bloc, on verifie si la variable "gagnant" porte le numero de ce bloc
+    b1.onclick = function ()
+    {
+        if (gagnant ==1)
+            {
+                // Si oui on affiche "Gagné" pour preciser que l'utilisateur a gagné le jeu
+                alert("Gagné!");
+            }
+        else
+        {
+            // Si non c'est perdu
+            alert("Perdu!");
+        }
+    };
     
+    // On fait la meme chose avec tous les 4 blocs
+    b2.onclick = function ()
+    {
+        if (gagnant ==2)
+            {
+                alert("Gagné!");
+            }
+        else
+        {
+            alert("Perdu!");
+        }
+    };
+    
+    b3.onclick = function ()
+    {
+        if (gagnant==3)
+            {
+                alert("Gagné!");
+            }
+        else
+        {
+            alert("Perdu!");
+        }
+    };
+    
+    b4.onclick = function ()
+    {
+        if (gagnant ==4)
+            {
+                alert("Gagné!");
+            }
+        else
+        {
+            alert("Perdu!");
+        }
+    };
     }, 500);
 }
