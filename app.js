@@ -32,6 +32,7 @@ nuit_jour.onclick = function (){
             // On met le font de la page en blanc et le texte en noire (par defaut)
             corps.style.backgroundColor = "white";
             corps.style.color = "black";
+            resultat.style.backgroundColor = "white"
             // On met le texte mode nuit
              nuit_jour.textContent ="MODE NUIT";
         }
@@ -39,6 +40,7 @@ nuit_jour.onclick = function (){
             // Dans le cas contraire on met le font en noire et le texte en blanc
             corps.style.backgroundColor = "black";
             corps.style.color = "white";
+            resultat.style.backgroundColor = "black"
             // On met le texte mode jour
             nuit_jour.textContent ="MODE JOUR";
         }
