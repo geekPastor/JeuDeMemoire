@@ -12,6 +12,8 @@ let corpsJeu = document.querySelector('ctn')
 let nuit_jour = document.getElementById("nuit_jour");
 let corps = document.querySelector("body");
 
+//la variable pour les boites d'indication
+let resultat = document.querySelector('.resultat')
 //ajout des variable pour l'indication
 
 let echec = document.querySelector('.echec');
@@ -135,10 +137,12 @@ function main(){
     {
         if (gagnant ==2)
             {
+                resultat.classList.add('active')
                 echec.classList.remove('active');
                 reussite.classList.add('active');
             }
         else{
+                resultat.classList.add('active')
                 reussite.classList.remove('active');
                 echec.classList.add('active');
         }
@@ -148,11 +152,13 @@ function main(){
     {
         if (gagnant==3)
             {
+                resultat.classList.add('active')
                 echec.classList.remove('active');
                 reussite.classList.add('active');
             }
         else{
             
+            resultat.classList.add('active')
             reussite.classList.remove('active');
             echec.classList.add('active');
         }
@@ -162,12 +168,13 @@ function main(){
     {
         if (gagnant ==4)
             {
-                
+                resultat.classList.add('active')
                 echec.classList.remove('active');
                 reussite.classList.add('active');
             }
         else
         {
+            resultat.classList.add('active')
             reussite.classList.remove('active');
             echec.classList.add('active');
         }
