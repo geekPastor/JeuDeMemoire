@@ -83,7 +83,6 @@ main .container .c1 .trv:hover, main .container .c2 .trv:hover{
 }
 
 .boite.active{
-    z-index: 1000;
     width: 20%;
     height: 30%;
     border: 1px solid #000;
@@ -93,6 +92,7 @@ main .container .c1 .trv:hover, main .container .c2 .trv:hover{
     align-items: center;
     flex-direction: column;
 }
+
 strong{
     font-size: 50px;
 }
