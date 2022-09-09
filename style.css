@@ -95,15 +95,6 @@ main .container .c1 .trv:hover, main .container .c2 .trv:hover{
 
 strong{
     font-size: 50px;
-    display: none;
-}
-
-.echec.active{
-    display: block;
-}
-
-.reussite.active{
-    display: block;
 }
 
 @media screen and (max-width: 450px){
