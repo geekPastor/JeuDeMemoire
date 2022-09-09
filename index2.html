@@ -6,54 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-        body{
-            background: #fff;
-            color: #000;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .dark-mode{
-            background: #000;
-            color: #fff;
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #4070f4;
+        }
+
+        body.dark{
+            background: #18191a;
+        }
+
+        .toggle{
+            height: 130px;
+            width: 300px;
+            position: relative;
+            border-radius: 100px;
+            background: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, o.2);
+            cursor: pointer;
+        }
+
+        .toggle::before{
+            content: "";
+            position: absolute;
+            height: 110px;
+            width: 110px;
+            background: #4070f4;
+            border-radius: 50%;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            transition: all  .5s ease-in-out;
+        }
+
+        .toggle.active::before{
+            left: calc(100% - 110px - 15px);
+            background: #18191a;
         }
     </style>
 </head>
 <body>
-    
-      <button id="bouton" onclick="mode()">Dark</button> 
+    <div class="toggle">
 
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia at laboriosam, sapiente blanditiis numquam dolor. Sapiente, praesentium! In incidunt, totam architecto repudiandae quia officiis voluptates culpa id odit error pariatur!
-      Voluptas odio beatae voluptates libero tempora explicabo laudantium nostrum? Nisi dolore, hic id ea dolorum maxime commodi odio omnis iste ipsam voluptas neque necessitatibus magni voluptates. Sapiente excepturi enim quidem?
-      Cupiditate nemo amet adipisci mollitia facilis excepturi quod consectetur animi delectus eveniet omnis exercitationem nesciunt, molestias neque illum quisquam voluptates rem culpa officiis doloremque explicabo. Dolore ex rem architecto corporis.</p>
+    </div>
 
+    <script>
+        let body = document.querySelector('body');
+        let toggle = document.querySelector(".toggle");
 
-      <script>
-        function mode(){
-            let setTheme = document.body
+        let stockMode = localStorage.getItem("mode");
+        if(stockMode && stockMode === "dark"){
+            body.classList.add("dark");
+            toggle.classList.add("active");
+        }
+        
 
-            setTheme.classList.toggle('dark-mode');
+        toggle.addEventListener("click", ()=>{
+            body.classList.toggle("dark");
 
-            let theme ;
-
-            if(setTheme.classList.contains('dark-mode')){
-                console.log('light-mode');
-                theme = 'LIGHT'
-            }else{
-                console.log('dark-mode')
-                theme = 'DARK'
+            if(!body.classList.contains("dark")){
+                return localStorage.setItem("mode", "light")
             }
-
-            //sauvegarde du theme 
-
-            localStorage.setItem('pageTheme', JSON.stringify(theme));
-        }
-
-        let getTheme = JSON.parse(localStorage.getItem('pageTheme'));
-        //console.log(getTheme);
-
-        if(getTheme === 'DARK'){
-            document.body.classList = "dark-mode";
-        }
-      </script>
+            localStorage.setItem("mode", "dark");
+        })
+        toggle.addEventListener("click", () =>
+            toggle.classList.toggle("active")
+        )
+    </script>
 </body>
 </html>

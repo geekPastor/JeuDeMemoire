@@ -8,9 +8,7 @@ let btn3 = document.getElementById('btn3');
 let btn4 = document.getElementById('btn4');
 let c1 = document.getElementById('c1');
 let c2 = document.getElementById('c2');
-let corpsJeu = document.querySelector('ctn')
-let nuit_jour = document.getElementById("nuit_jour");
-let corps = document.querySelector("body");
+let corpsJeu = document.querySelector('ctn');
 
 //la variable pour les boites d'indication
 let resultat = document.querySelector('.resultat')
@@ -20,32 +18,7 @@ let echec = document.querySelector('.echec');
 
 let reussite =  document.querySelector('.reussite')
 
-//je predefini le texte par defaut
-nuit_jour.textContent ="MODE NUIT";
-
-// Une fois qu'on clique dessus
-nuit_jour.onclick = function (){
-
-        //on verifie s'il y etait ecrit MODE JOUR
-        if (nuit_jour.textContent =="MODE JOUR"){
-
-            // On met le font de la page en blanc et le texte en noire (par defaut)
-            corps.style.backgroundColor = "white";
-            corps.style.color = "black";
-            resultat.style.backgroundColor = "white"
-            // On met le texte mode nuit
-             nuit_jour.textContent ="MODE NUIT";
-        }
-        else{
-            // Dans le cas contraire on met le font en noire et le texte en blanc
-            corps.style.backgroundColor = "black";
-            corps.style.color = "white";
-            resultat.style.backgroundColor = "black"
-            // On met le texte mode jour
-            nuit_jour.textContent ="MODE JOUR";
-        }
-    };
-
+//le mode sombre
 
 
 function changementCouleur(){
