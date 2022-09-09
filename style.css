@@ -98,7 +98,11 @@ strong{
     display: none;
 }
 
-strong.active{
+.echec.active{
+    display: block;
+}
+
+.reussite.active{
     display: block;
 }
 
