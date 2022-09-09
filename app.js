@@ -14,7 +14,8 @@ let corps = document.querySelector("body");
 
 let boite_de_dialogue = document.querySelector('.boite');
 
-let signe1 = document.querySelector('.signe1');
+let echec = document.querySelector('.echec');
+let reussite = document.querySelector('.reussite')
 
 let indication = document.querySelector('.indication')
 
@@ -119,7 +120,7 @@ function main(){
             {
                 // Si oui on affiche "Gagné" pour preciser que l'utilisateur a gagné le jeu
                 boite_de_dialogue.classList.add('active');
-                signe1.textContent = "Ohhhh"
+                signe2.classList.add('active');
                 indication.textContent = "Vous avez gagne(e)"
 
             }
@@ -127,7 +128,7 @@ function main(){
         {
             // Si non c'est perdu
                 boite_de_dialogue.classList.add('active');
-                signe1.textContent = "Oups"
+                signe1.classList.add('active');
                 indication.textContent = "Vous avez perdu(e)"
         }
     };
@@ -138,12 +139,12 @@ function main(){
         if (gagnant ==2)
             {
                 boite_de_dialogue.classList.add('active');
-                signe1.textContent = "Felicitation"
+                signe2.classList.add('active');
                 indication.textContent = "Vous avez gagne(e)"
             }
         else{
                 boite_de_dialogue.classList.add('active');
-                signe1.textContent = "Oups"
+                signe1.classList.add('active');
                 indication.textContent = "Vous avez perdu(e)"
         }
     };
@@ -153,12 +154,12 @@ function main(){
         if (gagnant==3)
             {
                 boite_de_dialogue.classList.add('active');
-                signe1.textContent = "Felicitation"
+                signe2.classList.add('active');
                 indication.textContent = "Vous avez gagne(e)"
             }
         else{
             boite_de_dialogue.classList.add('active');
-            signe1.textContent = "Oups"
+            signe1.classList.add('active');
             indication.textContent = "Vous avez perdu(e)"
         }
     };
@@ -168,13 +169,13 @@ function main(){
         if (gagnant ==4)
             {
                 boite_de_dialogue.classList.add('active');
-                signe1.textContent = "Felicitation"
+                signe2.classList.add('active');
                 indication.textContent = "Vous avez gagne(e)"
             }
         else
         {
             boite_de_dialogue.classList.add('active');
-            signe1.textContent = "Oups"
+            signe1.classList.add('active');
             indication.textContent = "Vous avez perdu(e)"
         }
     };
