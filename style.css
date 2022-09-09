@@ -82,6 +82,19 @@ main .container .c1 .trv:hover, main .container .c2 .trv:hover{
     display: none;
 }
 
+.okay{
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.action{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .boite.active{
     width: 20%;
     height: 30%;
@@ -91,6 +104,7 @@ main .container .c1 .trv:hover, main .container .c2 .trv:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 50px;
 }
 
 strong{
