@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background: #fff;
+            color: #000;
+        }
+
+        .dark-mode{
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+      <button id="bouton" onclick="mode()">Dark</button> 
+
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia at laboriosam, sapiente blanditiis numquam dolor. Sapiente, praesentium! In incidunt, totam architecto repudiandae quia officiis voluptates culpa id odit error pariatur!
+      Voluptas odio beatae voluptates libero tempora explicabo laudantium nostrum? Nisi dolore, hic id ea dolorum maxime commodi odio omnis iste ipsam voluptas neque necessitatibus magni voluptates. Sapiente excepturi enim quidem?
+      Cupiditate nemo amet adipisci mollitia facilis excepturi quod consectetur animi delectus eveniet omnis exercitationem nesciunt, molestias neque illum quisquam voluptates rem culpa officiis doloremque explicabo. Dolore ex rem architecto corporis.</p>
+
+
+      <script>
+        function mode(){
+            let setTheme = document.body
+
+            setTheme.classList.toggle('dark-mode');
+
+            let theme ;
+
+            if(setTheme.classList.contains('dark-mode')){
+                console.log('light-mode');
+                theme = 'LIGHT'
+            }else{
+                console.log('dark-mode')
+                theme = 'DARK'
+            }
+
+            //sauvegarde du theme 
+
+            localStorage.setItem('pageTheme', JSON.stringify(theme));
+        }
+
+        let getTheme = JSON.parse(localStorage.getItem('pageTheme'));
+        //console.log(getTheme);
+
+        if(getTheme === 'DARK'){
+            document.body.classList = "dark-mode";
+        }
+      </script>
+</body>
+</html>

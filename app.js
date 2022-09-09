@@ -118,12 +118,14 @@ function main(){
         if (gagnant ==1)
             {
                 // Si oui on affiche "Gagné" pour preciser que l'utilisateur a gagné le jeu
+                echec.classList.remove('active');
                reussite.classList.add('active');
 
             }
         else
         {
             // Si non c'est perdu
+            reussite.classList.remove('active');
             echec.classList.add('active');
         }
     };
@@ -133,9 +135,11 @@ function main(){
     {
         if (gagnant ==2)
             {
-               reussite.classList.add('active');
+                echec.classList.remove('active');
+                reussite.classList.add('active');
             }
         else{
+                reussite.classList.remove('active');
                 echec.classList.add('active');
         }
     };
@@ -144,10 +148,12 @@ function main(){
     {
         if (gagnant==3)
             {
+                echec.classList.remove('active');
                 reussite.classList.add('active');
             }
         else{
             
+            reussite.classList.remove('active');
             echec.classList.add('active');
         }
     };
@@ -157,10 +163,12 @@ function main(){
         if (gagnant ==4)
             {
                 
+                echec.classList.remove('active');
                 reussite.classList.add('active');
             }
         else
         {
+            reussite.classList.remove('active');
             echec.classList.add('active');
         }
     };
