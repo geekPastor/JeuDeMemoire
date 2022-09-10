@@ -1,5 +1,4 @@
 let btnplay = document.getElementsByClassName('play');
-
 let gagnant
 let nb
 let btn1 = document.getElementById('btn1');
@@ -34,7 +33,7 @@ let body = document.querySelector('body');
         toggle.addEventListener("click", ()=>{
             if(!body.classList.contains('dark')){
                 body.classList.toggle("dark");
-                resultat.style.backgroundColor = "#18191a"
+                resultat.style.backgroundColor = "#301c50"
             }else{
                 body.classList.remove('dark')
                 resultat.style.backgroundColor = "#fff"

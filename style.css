@@ -6,12 +6,12 @@
 
 body{
     background-color: #fff;
-    color: #18191a;
+    color: #301c50;
 }
 
 body.dark{
     color: #fff;
-    background-color: #18191a;
+    background-color: #301c50;
 }
 
 header{
@@ -48,7 +48,7 @@ nav{
     width: 150px;
     position: relative;
     border-radius: 100px;
-    background: #fff;
+    background: #301c50;
     border: 1px solid #000;
     cursor: pointer;
 }
@@ -58,7 +58,7 @@ nav{
     position: absolute;
     height: 50px;
     width: 50px;
-    background: #4070f4;
+    background: #fff;
     border-radius: 50%;
     top: 50%;
     left: 5px;
@@ -66,9 +66,13 @@ nav{
     transition: all  .5s ease-in-out;
 }
 
+.toggle.active{
+    background: #fff;
+}
+
 .toggle.active::before{
     left: calc(100% - 50px - 5px);
-    background: #18191a;
+    background: #301c50;
 }
 
 main{
@@ -164,7 +168,7 @@ strong{
 }
 
 body.dark .resultat{
-    background: #18191a;
+    background: #301c50;
 }
 
 .resultat.active{
