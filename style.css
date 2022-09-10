@@ -7,6 +7,7 @@
 body{
     background-color: #fff;
     color: #301c50;
+    transition: all .5s ease-in-out;
 }
 
 body.dark{
@@ -28,7 +29,7 @@ header{
 
 nav{
     margin-right: 50px;
-    width: 30%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,6 +125,10 @@ main .container .c1 .trv:hover, main .container .c2 .trv:hover{
     display: none;
 }
 
+.aide{
+    display: none;
+}
+
 .okay{
     width: 50%;
     font-size: 20px;
@@ -137,7 +142,9 @@ main .container .c1 .trv:hover, main .container .c2 .trv:hover{
     align-items: center;
 }
 
-.boite.active{
+
+
+.boite.active, .aide.active{
     width: 20%;
     height: 30%;
     border: 1px solid #000;
@@ -147,6 +154,12 @@ main .container .c1 .trv:hover, main .container .c2 .trv:hover{
     align-items: center;
     flex-direction: column;
     gap: 50px;
+}
+
+.aide.active{
+    width: 40%;
+    height: 45%;
+    text-align: center;
 }
 
 strong{
@@ -175,7 +188,7 @@ body.dark .resultat{
     z-index: 1;
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 900px){
     .instruction{
         display: none;
     }

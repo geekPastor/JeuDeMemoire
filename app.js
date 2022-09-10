@@ -8,6 +8,14 @@ let btn4 = document.getElementById('btn4');
 let c1 = document.getElementById('c1');
 let c2 = document.getElementById('c2');
 let corpsJeu = document.querySelector('ctn');
+//le message d'aide
+let aide = document.querySelector('.help')
+let desc = document.querySelector('.aide')
+
+aide.onclick = function(){
+    resultat.classList.add('active');
+    desc.classList.add('active');
+}
 
 //la variable pour les boites d'indication
 let resultat = document.querySelector('.resultat')
@@ -126,6 +134,7 @@ function main(){
         if (gagnant ==1)
             {
                 // Si oui on affiche "Gagné" pour preciser que l'utilisateur a gagné le jeu
+                resultat.classList.add('active')
                 echec.classList.remove('active');
                reussite.classList.add('active');
 
@@ -133,6 +142,7 @@ function main(){
         else
         {
             // Si non c'est perdu
+            resultat.classList.add('active')
             reussite.classList.remove('active');
             echec.classList.add('active');
         }
