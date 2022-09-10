@@ -163,6 +163,10 @@ strong{
     align-items: center;
 }
 
+body.dark .resultat{
+    background: #18191a;
+}
+
 .resultat.active{
     z-index: 1;
 }

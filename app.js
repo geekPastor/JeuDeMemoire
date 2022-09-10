@@ -32,8 +32,13 @@ let body = document.querySelector('body');
         
 
         toggle.addEventListener("click", ()=>{
-            body.classList.toggle("dark");
-            resultat.style.backgroundColor = "#18191a"
+            if(!body.classList.contains('dark')){
+                body.classList.toggle("dark");
+                resultat.style.backgroundColor = "#18191a"
+            }else{
+                body.classList.remove('dark')
+                resultat.style.backgroundColor = "#fff"
+            }
 
             if(!body.classList.contains("dark")){
                 return localStorage.setItem("mode", "light")
